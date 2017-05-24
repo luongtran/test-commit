@@ -47,6 +47,9 @@ class TestsController < ApplicationController
 
   def check
     @test = Test.find(params[:id])
+    if @test.nil?
+      
+    end
   end
 
   private
