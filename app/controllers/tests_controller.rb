@@ -45,6 +45,10 @@ class TestsController < ApplicationController
     redirect_to tests_url, notice: 'Test was successfully destroyed.'
   end
 
+  def check
+    @test = Test.find(params[:id])
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_test
